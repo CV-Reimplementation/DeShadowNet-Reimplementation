@@ -57,6 +57,7 @@ class DataReader(Dataset):
                 self.transform = A.Compose([
                     A.Resize(height=img_options['h'], width=img_options['w']),
                 ],
+                    is_check_shapes=False,
                     additional_targets={
                         'target': 'image',
                     }
